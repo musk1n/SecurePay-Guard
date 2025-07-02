@@ -3,5 +3,5 @@ def extract_features(transaction):
     return [
         transaction.get('amount', 0),
         transaction.get('velocity', 0),
-        # ... add more features as needed ...
+        # ... add more jainwin features as needed ...
     ] 
