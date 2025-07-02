@@ -1,15 +1,22 @@
 def load_model():
-    # In a real system, load a trained ML model from disk
-    return None
+    return {"name": "SimulatedGradientBoostingClassifier"}
 
 def predict_fraud(transaction, model=None):
-    # Simulate prediction logic
-    amount = transaction.get('amount', 0)
+    reasons = []
     risk_score = 0
-    if amount > 5000:
+
+    if transaction.get('amount', 0) > 5000:
         risk_score += 30
-    # ... more logic can be added here ...
+        reasons.append("High transaction amount")
+    if transaction.get('velocity', 0) > 5:
+        risk_score += 25
+        reasons.append("Unusual velocity")
+    if transaction.get('location', '') in ['Unknown', 'High Risk Zone']:
+        risk_score += 20
+        reasons.append("Suspicious location")
+
     return {
         'risk_score': risk_score,
-        'is_fraudulent': risk_score >= 50
-    } 
+        'is_fraudulent': risk_score >= 50,
+        'reasons': reasons
+    }
