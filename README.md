@@ -35,6 +35,21 @@
   Easily adjust fraud detection thresholds and rules for different business needs.
 
 ---
+## 🪙 How We Use Blockchain
+
+> **SecurePay Guard** integrates a lightweight, demo-friendly blockchain to enhance trust, auditability, and integrity for critical transaction records.
+
+- **Immutable Logging:**  
+  Every flagged (fraudulent/suspicious) transaction is recorded to a blockchain-inspired ledger, ensuring a tamper-evident, auditable trail.
+
+- **Block Mining:**  
+  Transactions are grouped into blocks, each cryptographically linked to the previous block (via hashes), simulating real blockchain immutability.
+
+- **API Integration:**  
+  The backend exposes a `/api/blockchain/record` endpoint. When a transaction is flagged, it is sent to this endpoint and written to the chain.
+
+- **Transparency:**  
+  Auditors and analysts can fetch the full blockchain or pending transactions, verify the integrity of the record, and review the entire chain of custody for every fraud event.
 
 ## 🖥️ Main Pages & Navigation
 
