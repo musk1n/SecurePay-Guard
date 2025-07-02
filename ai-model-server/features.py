@@ -1,7 +1,10 @@
 def extract_features(transaction):
-    # Convert transaction dict to feature vector for ML model
     return [
         transaction.get('amount', 0),
         transaction.get('velocity', 0),
-        # ... add more jainwin features as needed ...
-    ] 
+        transaction.get('location', ''),
+        transaction.get('timestamp', ''),
+        transaction.get('deviceFingerprint', ''),
+        transaction.get('ipAddress', '')
+    ]
+
