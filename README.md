@@ -121,31 +121,6 @@ Each rule increases a transaction’s risk score. If the score exceeds a thresho
 
 ---
 
-## 📦 Project Structure
-
-```
-/src
-  /components    # React UI components (Dashboard, Login, RealTimeMonitor, etc.)
-  /utils         # Fraud detection logic, mock data generators
-  /types         # TypeScript types for User, Transaction, etc.
-server/
-  fraudDetection.js # Core backend logic for fraud risk scoring
-  index.js          # Express/Flask server entry point
-```
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome! Add new detection rules, improve the UI, or integrate more advanced ML models. See `CONTRIBUTING.md` for details.
-
----
-
-## 🛡️ License
-
-MIT License (add full text in LICENSE file if needed)
-
----
 
 ## 💬 Questions?
 
