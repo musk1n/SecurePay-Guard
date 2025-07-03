@@ -27,7 +27,7 @@ function detectFraud(transaction) {
   }
   if (FRAUD_INDICATORS.SUSPICIOUS_LOCATIONS.includes(transaction.location)) {
     reasons.push('Transaction from high-risk location');
-    riskScore += 8; 
+    riskScore += 2; 
   }
   if (FRAUD_INDICATORS.CARD_TESTING_AMOUNTS.includes(transaction.amount)) {
     reasons.push('Amount matches card testing pattern');
@@ -48,11 +48,11 @@ function detectFraud(transaction) {
 
   const trustScore = Math.max(0, 100 - riskScore);
   let riskLevel = 'low';
-  if (riskScore >= 70) riskLevel = 'critical';
-  else if (riskScore >= 50) riskLevel = 'high';
+  if (riskScore >= 95) riskLevel = 'critical';
+  else if (riskScore >= 90) riskLevel = 'high';
   else if (riskScore >= 30) riskLevel = 'medium';
 
-  const isFraudulent = riskScore >= 50;
+  const isFraudulent = riskScore >= 90;
 
   return {
     isFraudulent,
