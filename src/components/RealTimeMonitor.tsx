@@ -137,7 +137,7 @@ export const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ transactions }
       </div>
 
       {/* ML Model Status */}
-      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+{/*       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
         <h3 className="text-xl font-semibold text-white mb-4">ML Model Status</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -160,7 +160,7 @@ export const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ transactions }
                 <span className="text-green-400 text-sm">Active</span>
               </div>
             </div>
-          </div>
+          </div> */}
           <div>
             <h4 className="text-white font-medium mb-3">Performance Metrics</h4>
             <div className="space-y-2">
